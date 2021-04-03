@@ -3,8 +3,16 @@ import bodyParser = require('body-parser');
 import cors = require('cors');
 import winston = require('winston');
 
+import xlsx = require('xlsx');
+import fileUpload = require('express-fileupload');
+import multer = require('multer');
+const upload = multer({
+  dest: 'uploads/',
+  storage: multer.memoryStorage()
+})
+
 const app = express()
-const port = process.env.PORT || 8000
+const port = 8000
 
 const db = require('./models/index')
 db.sequelize.sync()
@@ -37,8 +45,14 @@ app.use(bodyParser.json())
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use(fileUpload())
+
 app.get('/', (req, res) => {
   res.json({ message: 'Active Tools', ver: '0.0.1' })
+})
+
+app.post('/exceltocsv', upload.single('classes'), (req, res) => {
+  res.json(xlsx.read(req.file))
 })
 
 app.listen(port, () => {
