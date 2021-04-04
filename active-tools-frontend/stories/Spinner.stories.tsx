@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Spinner, SpinnerProps } from '../components/ui/spinner';
+import { Spinner, SpinnerProps } from '../src/components/spinner';
 
 export default {
   title: 'UI/Spinner',
