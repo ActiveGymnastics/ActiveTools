@@ -2,10 +2,10 @@ import React from 'react';
 import './button.css';
 
 const sizes = {
-  "small": "py-1 px-2",
-  "medium": "py-2 px-4",
-  "large": "py-4 px-8",
-};
+  sm: "text-xs px-3 py-2",
+  md: "text-md px-4 py-2",
+  lg: "text-lg px-5 py-3",
+}
 
 export interface ButtonProps {
   label?: string;
@@ -28,7 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type="button"
-      className={['kj-button', 'rounded-lg', 'bg-indigo-600', 'hover:bg-indigo-700', 'focus:ring-indigo-500', 'text-white', 'w-full', 'transition ease-in duration-200', 'text-center font-semibold', 'shadow-md', 'focus:outline-none focus:ring-2 focus:ring-offset-2', `${sizes[size]}`, mode].join(' ')}
+      className={['inline-block bg-indigo-500 text-white rounded', sizes[size], mode].join(' ')}
       style={{ backgroundColor, color }}
       {...props}
     >
