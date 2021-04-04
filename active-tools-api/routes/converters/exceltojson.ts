@@ -11,6 +11,6 @@
 //   storage: multer.memoryStorage()
 // })
 
-export function xlsxtojson (req:any, res:any, xlsxfile: File) {
-  res.json('a')
+export function xlsxtojson (xlsxfile: File) {
+  return ('A')
 }
