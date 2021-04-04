@@ -11,7 +11,7 @@ export default {
     color: { control: 'color' },
     size: {
       control: 'select',
-      options: ['small', 'medium', 'large']
+      options: ['sm', 'md', 'lg']
     }
   },
 } as Meta;
@@ -31,12 +31,18 @@ Secondary.args = {
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 'large',
+  size: 'lg',
+  label: 'Button',
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  size: 'md',
   label: 'Button',
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'small',
+  size: 'sm',
   label: 'Button',
 };

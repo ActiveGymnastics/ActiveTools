@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind forms;
+
 .kj-spinner-animation {
   animation:spin 4s linear infinite;
 }
