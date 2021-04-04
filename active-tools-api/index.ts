@@ -1,5 +1,4 @@
 import express = require('express');
-import bodyParser = require('body-parser');
 import cors = require('cors');
 import winston = require('winston');
 
@@ -41,9 +40,9 @@ if (process.env.NODE_ENV !== 'production') {
 app.use(cors(corsOptions))
 
 // Parse requests with application/json
-app.use(bodyParser.json())
+app.use(express.json())
 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.urlencoded())
 
 app.use(fileUpload())
 
