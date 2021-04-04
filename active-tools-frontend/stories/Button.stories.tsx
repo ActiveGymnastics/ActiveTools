@@ -1,13 +1,18 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import { Button, ButtonProps } from './Button';
+import { Button, ButtonProps } from '../components/ui/button';
 
 export default {
-  title: 'Example/Button',
+  title: 'UI/Button',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
+    color: { control: 'color' },
+    size: {
+      control: 'select',
+      options: ['small', 'medium', 'large']
+    }
   },
 } as Meta;
 
