@@ -2,14 +2,6 @@ import express = require('express');
 import cors = require('cors');
 import winston = require('winston');
 
-import xlsx = require('xlsx');
-import fileUpload = require('express-fileupload');
-import multer = require('multer');
-const upload = multer({
-  dest: 'uploads/',
-  storage: multer.memoryStorage()
-})
-
 const app = express()
 const port = 8000
 
@@ -44,15 +36,12 @@ app.use(express.json())
 
 app.use(express.urlencoded())
 
-app.use(fileUpload())
-
 app.get('/', (req, res) => {
   res.json({ message: 'Active Tools', ver: '0.0.1' })
 })
 
-app.post('/exceltocsv', upload.single('classes'), (req, res) => {
-  res.json(xlsx.read(req.file))
-})
+// Import Routes from /routes Directory
+require('./routes/index')(app)
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`)
