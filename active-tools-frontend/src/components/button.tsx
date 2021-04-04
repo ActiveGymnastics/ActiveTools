@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   ...props
 }) => {
-  const mode = primary ? 'bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white' : 'bg-gray-50 hover:bg-gray-200 focus:ring-gray-500 focus:ring-offset-gray-50 text-black';
+  const mode = primary ? 'bg-primary-600 hover:bg-primary-500 focus:ring-primary-500 focus:ring-offset-primary-200 text-white' : 'bg-gray-50 hover:bg-gray-200 focus:ring-gray-500 focus:ring-offset-gray-50 text-black';
   return (
     <button
       type="button"
