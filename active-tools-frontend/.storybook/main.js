@@ -8,6 +8,17 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    // '@storybook/addon-actions',
+    // '@storybook/addon-viewport',
+    // '@storybook/addon-docs',
+    // '@storybook/addon-backgrounds',
+    // '@storybook/addon-controls',
+    // '@storybook/addon-toolbars',
+    // '@storybook/addon-links',
+    // '@storybook/addon-a11y',
+    // 'storybook-addon-designs',
+    // 'storybook-dark-mode',
+    // '@storybook/addon-console'
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
