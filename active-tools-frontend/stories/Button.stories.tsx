@@ -7,8 +7,10 @@ export default {
   title: 'UI/Button',
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    color: { control: 'color' },
+    label: { control: 'text'},
+    primary: { control: 'checkbox' },
+    backgroundColor: { control: 'text' },
+    color: { control: 'text' },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg']
@@ -22,6 +24,8 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Button',
+  color: 'tw-primary-500',
+  backgroundColor: 'tw-white-500'
 };
 
 export const Secondary = Template.bind({});
