@@ -18,6 +18,12 @@ export default {
       control: "select",
       options: ["sm", "md", "lg"],
     },
+    fullwidth: {
+      control: "boolean",
+    },
+    twbackgroundColor: {
+      control: "text",
+    },
   },
 } as Meta;
 
