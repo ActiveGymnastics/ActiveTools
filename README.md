@@ -1,4 +1,7 @@
 # ActiveTools
+
+*Documentation is currently very sparse and out of date. However, once the project nears a completed state we will add more documentation. However, in the mean time you can still contribute changes.*
+
 Small tools &amp; features to help manage your business
 
 ## Installation
